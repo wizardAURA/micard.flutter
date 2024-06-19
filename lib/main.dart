@@ -8,40 +8,87 @@ class  myapp  extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
     home: Scaffold(
-    backgroundColor: Colors.teal,
-body: SafeArea
-  (child: Column(
-  mainAxisAlignment: MainAxisAlignment.end,
-    children: [
-      Container(
-      height: 80,
-      width: 80,
-      margin: EdgeInsets.all(20),
-      padding: EdgeInsets.fromLTRB(20,30,0,0),
-      color: Colors.white,
-      child: Text('Joel'),
+    backgroundColor: Colors.black,
+body: Container(
+  margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+  child: SafeArea
+
+    (child: Column(
+
+    children:[
+      Center(
+
+        child: CircleAvatar(
+
+          radius:40,
+          backgroundImage: AssetImage('images/Designer.png'),
+
+        ),
       ),
-      Container(
-        height: 80,
-        width: 80,
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.fromLTRB(20,30,0,0),
-        color: Colors.red,
-        child: Text('Joel2'),
+      Center(child: Text('Joel Paul',
+      style: TextStyle(
+        fontFamily: 'Tiny5',
+        color: Colors.white,
+        fontWeight: FontWeight.w300,
+        fontSize: 40
       ),
-      Container(
-        height: 80,
-        width: 80,
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.fromLTRB(20,30,0,0),
-        color: Colors.blueGrey,
-        child: Text('Joel3'),
+      ),),
+      Center(child: Text(
+          'Flutter Developer',
+          style: TextStyle(
+            fontFamily: 'GideonRoman',
+            color: Colors.grey,
+            letterSpacing: 2
+          ),
+      ),
+      ),
+      SizedBox(height: 40.0,
+      width: 250,
+      child: Divider(
+        color: Colors.grey.shade500,
+      ),),
+      Card(
+       color: Colors.grey.shade300 ,
+      margin: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30),
+
+      child: ListTile(
+        leading: Icon(Icons.phone,
+          color: Colors.black,
+        ),
+        title: Text('+91 6292240780',
+          style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'Tiny5',
+              fontWeight: FontWeight.normal
+          ),
+        ),
+      ),
+
+      ),
+      Card(
+        margin: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30),
+      color: Colors.grey.shade300  ,
+      child: ListTile(
+        leading:Icon(Icons.mail,
+            color: Colors.black
+        ),
+        title:Text('metalprophet221@gmail.com',
+          style: TextStyle(color:Colors.black,
+              fontFamily: 'Tiny5',
+              fontWeight: FontWeight.normal
+          ),
+        ),
+      ),
+
       ),
     ],
+  )
   ),
 ),
 ),
 );
   }
 }
+
+
 
